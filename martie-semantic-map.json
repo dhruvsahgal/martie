@@ -1,0 +1,1415 @@
+{
+  "schema_version": 1,
+  "bot_name": "Martie",
+  "updated_on": "2026-10-28",
+  "purpose": "Semantic seed map from the historical chat export, enriched with dated observations from the complete Standard list. Not an active order or deployed runtime.",
+  "source_summary": {
+    "mentions": 60,
+    "distinct_entries": 50,
+    "status_counts": {
+      "normalized_meaning": 34,
+      "confirmed_meaning": 4,
+      "needs_confirmation": 12
+    }
+  },
+  "personal_name_handling": {
+    "placeholder": "{child}",
+    "display_prefix": "Baby",
+    "setup_required": "Bind {child} to the private household name during setup. Template aliases are not active until configured. The actual name is omitted from this artifact."
+  },
+  "status_guide": {
+    "normalized_meaning": "Clear language normalization only; catalogue evidence is recorded separately and is not a permanent household preference.",
+    "confirmed_meaning": "User-confirmed meaning. Current catalogue observations are separate and require live revalidation before use.",
+    "needs_confirmation": "Keep separate and do not automatically resolve this item until the listed ambiguity is answered."
+  },
+  "usage_rules": [
+    "Use this export for vocabulary and aliases only. Repeated mentions are not quantities and do not request cart additions.",
+    "Quantities belong to each new tagged request; never learn quantities from historical frequency.",
+    "Resolve candidates only from the complete live Standard list. Historical product hints are not approved current bindings.",
+    "Choose the cheapest currently available compatible product; preserve explicit constraints and clarify materially different unresolved variants.",
+    "Skip products absent from the complete live list. Do not freeze earlier missing-item, stock or price observations.",
+    "Child and household versions remain distinct until the user confirms they mean the same product.",
+    "Do not merge the adjacent Fish and Sauce lines until their intended grouping is confirmed.",
+    "Runtime activation, learning, confirmation, correction and cart rules remain governed by the Martie plan.",
+    "Catalogue observations, candidate sets and price winners are dated evidence for setup, not semantic memory or runtime approvals. Do not import these as permanent SKU bindings."
+  ],
+  "governing_plan": "docs/plans/2026-10-15-1816-feat-whatsapp-redmart-grocery-bot-plan.md",
+  "entries": [
+    {
+      "id": "potatoes",
+      "label": "Potatoes",
+      "aliases": [
+        "potato",
+        "potatos",
+        "potatoes"
+      ],
+      "meaning": "potatoes",
+      "status": "normalized_meaning",
+      "mentions_in_export": 3,
+      "provenance": "chat_export_and_assistant_normalization",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i1960590504-s10531677365"
+        ],
+        "basis": "complete_standard_list_observation",
+        "selected_at_observation": {
+          "product_id": "i1960590504-s10531677365",
+          "price_sgd_cents": 450,
+          "basis": "lowest displayed listed-pack price within this compatible set; refresh at runtime"
+        }
+      }
+    },
+    {
+      "id": "light_soy_sauce",
+      "label": "Light soy sauce",
+      "aliases": [
+        "lt soya souce",
+        "light soy sauce"
+      ],
+      "meaning": "light soy sauce",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "explicit_constraints": {
+        "type": "light"
+      },
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i301158204-s527196241"
+        ],
+        "basis": "user_requested_standard_addition_and_verified_complete_list",
+        "selected_at_observation": {
+          "product_id": "i301158204-s527196241",
+          "price_sgd_cents": 300,
+          "basis": "only compatible candidate observed; refresh membership, price and stock at runtime"
+        }
+      },
+      "catalogue_match_history": [
+        {
+          "snapshot_id": "standard-2026-10-28",
+          "status": "not_found_in_standard",
+          "candidate_product_ids": [],
+          "basis": "complete_standard_list_observation",
+          "reason": "Seen in All Products in My Lists, but absent from Standard. The broader wishlist is not the eligibility authority."
+        }
+      ],
+      "standard_list_addition": {
+        "requested_on": "2026-10-28",
+        "verified_on": "2026-10-28",
+        "product_id": "i301158204-s527196241",
+        "source": "User requested adding the corresponding All Products item to Standard."
+      }
+    },
+    {
+      "id": "dishwashing",
+      "label": "Dishwashing",
+      "aliases": [
+        "diswashing",
+        "dishwashing"
+      ],
+      "meaning": "dishwashing liquid",
+      "status": "normalized_meaning",
+      "mentions_in_export": 3,
+      "provenance": "chat_export_and_standard_list_normalization",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i2000659385-s10863526265"
+        ],
+        "basis": "complete_standard_list_observation",
+        "selected_at_observation": {
+          "product_id": "i2000659385-s10863526265",
+          "price_sgd_cents": 325,
+          "basis": "lowest displayed listed-pack price within this compatible set; refresh at runtime"
+        }
+      },
+      "resolved_question": "Hand-washing liquid, dishwasher tablets/powder, or another product? Which Standard item?",
+      "note": "The only dishwashing product in Standard is Bio-Home dishwashing liquid; no dishwasher tablets or powder observed. This is catalogue-grounded normalization, not a permanent brand preference."
+    },
+    {
+      "id": "baby_cheese",
+      "label": "Baby cheese",
+      "aliases": [
+        "{child} cheese",
+        "baby cheese",
+        "{child}'s cheese"
+      ],
+      "meaning": "Babybel cheese",
+      "status": "confirmed_meaning",
+      "mentions_in_export": 2,
+      "provenance": "prior_explicit_user_confirmation",
+      "explicit_constraints": {
+        "brand": "Babybel"
+      },
+      "note": "Meaning was explicitly confirmed earlier. A 2026-10-14 observation of Mini Babybel does not establish today's eligibility or preferred pack.",
+      "historical_product_hint": {
+        "observed_on": "2026-10-14",
+        "product": "Mini Babybel Cheese 5 PCS",
+        "pack": "100 g / 5 pieces",
+        "url": "https://www.lazada.sg/products/pdp-i301144742-s527204845.html"
+      },
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i301144742-s527204845"
+        ],
+        "basis": "complete_standard_list_observation",
+        "selected_at_observation": {
+          "product_id": "i301144742-s527204845",
+          "price_sgd_cents": 695,
+          "basis": "lowest displayed listed-pack price within this compatible set; refresh at runtime"
+        }
+      }
+    },
+    {
+      "id": "edamame",
+      "label": "Edamame",
+      "aliases": [
+        "endamame",
+        "edamame"
+      ],
+      "meaning": "edamame",
+      "status": "normalized_meaning",
+      "mentions_in_export": 2,
+      "provenance": "chat_export_and_assistant_normalization",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched_sold_out",
+        "candidate_product_ids": [
+          "i2856622171-s19691070848"
+        ],
+        "basis": "complete_standard_list_observation"
+      }
+    },
+    {
+      "id": "white_sugar",
+      "label": "White sugar",
+      "aliases": [
+        "white sugar"
+      ],
+      "meaning": "white sugar",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "explicit_constraints": {
+        "type": "white"
+      },
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i301076954-s527122191"
+        ],
+        "basis": "user_requested_standard_addition_and_verified_complete_list",
+        "selected_at_observation": {
+          "product_id": "i301076954-s527122191",
+          "price_sgd_cents": 185,
+          "basis": "only compatible candidate observed; refresh membership, price and stock at runtime"
+        }
+      },
+      "catalogue_match_history": [
+        {
+          "snapshot_id": "standard-2026-10-28",
+          "status": "not_found_in_standard",
+          "candidate_product_ids": [],
+          "basis": "complete_standard_list_observation",
+          "reason": "Seen in All Products in My Lists, but absent from Standard."
+        }
+      ],
+      "standard_list_addition": {
+        "requested_on": "2026-10-28",
+        "verified_on": "2026-10-28",
+        "product_id": "i301076954-s527122191",
+        "source": "User requested adding the corresponding All Products item to Standard."
+      }
+    },
+    {
+      "id": "turmeric_powder",
+      "label": "Turmeric powder",
+      "aliases": [
+        "turmeric powder"
+      ],
+      "meaning": "turmeric powder",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "explicit_constraints": {
+        "form": "powder"
+      },
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i304176263-s538344859"
+        ],
+        "basis": "user_requested_standard_addition_and_verified_complete_list",
+        "selected_at_observation": {
+          "product_id": "i304176263-s538344859",
+          "price_sgd_cents": 290,
+          "basis": "only compatible candidate observed; refresh membership, price and stock at runtime"
+        }
+      },
+      "catalogue_match_history": [
+        {
+          "snapshot_id": "standard-2026-10-28",
+          "status": "not_found_in_standard",
+          "candidate_product_ids": [],
+          "basis": "complete_standard_list_observation",
+          "reason": "Seen in All Products in My Lists, but absent from Standard."
+        }
+      ],
+      "standard_list_addition": {
+        "requested_on": "2026-10-28",
+        "verified_on": "2026-10-28",
+        "product_id": "i304176263-s538344859",
+        "source": "User requested adding the corresponding All Products item to Standard."
+      }
+    },
+    {
+      "id": "salted_butter",
+      "label": "Salted butter",
+      "aliases": [
+        "salted butter"
+      ],
+      "meaning": "salted butter",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "explicit_constraints": {
+        "salted": true
+      },
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i304352167-s538576047"
+        ],
+        "basis": "complete_standard_list_observation",
+        "selected_at_observation": {
+          "product_id": "i304352167-s538576047",
+          "price_sgd_cents": 896,
+          "basis": "lowest displayed listed-pack price within this compatible set; refresh at runtime"
+        }
+      }
+    },
+    {
+      "id": "bananas",
+      "label": "Bananas",
+      "aliases": [
+        "banana",
+        "bananas",
+        "pisang",
+        "pisang banana",
+        "pisang bananas",
+        "pisang berangan bananas"
+      ],
+      "meaning": "Pisang bananas",
+      "status": "confirmed_meaning",
+      "mentions_in_export": 3,
+      "provenance": "explicit_user_confirmation_2026-10-28",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i303368402-s536720427"
+        ],
+        "basis": "user_requested_standard_addition_and_verified_complete_list",
+        "selected_at_observation": {
+          "product_id": "i303368402-s536720427",
+          "price_sgd_cents": 295,
+          "basis": "only compatible candidate observed; refresh membership, price and stock at runtime"
+        }
+      },
+      "catalogue_match_history": [
+        {
+          "snapshot_id": "standard-2026-10-28",
+          "status": "not_found_in_standard",
+          "candidate_product_ids": [],
+          "basis": "complete_standard_list_observation",
+          "reason": "Seen in All Products in My Lists, but absent from Standard."
+        }
+      ],
+      "standard_list_addition": {
+        "requested_on": "2026-10-28",
+        "verified_on": "2026-10-28",
+        "product_id": "i303368402-s536720427",
+        "source": "User requested adding the corresponding All Products item to Standard."
+      },
+      "meaning_history": [
+        {
+          "meaning": "bananas",
+          "status": "normalized_meaning",
+          "provenance": "chat_export_and_assistant_normalization"
+        }
+      ],
+      "explicit_constraints": {
+        "banana_type": "Pisang"
+      },
+      "note": "User said bananas usually means Pisang bananas and requested the listed Pisang Berangan Malaysian Bananas be added to Standard. Current pack and price remain observations, not learned order quantities."
+    },
+    {
+      "id": "celery",
+      "label": "Celery",
+      "aliases": [
+        "celery",
+        "cellery"
+      ],
+      "meaning": "celery",
+      "status": "normalized_meaning",
+      "mentions_in_export": 2,
+      "provenance": "chat_export_and_assistant_normalization",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i2353933232-s13731699846"
+        ],
+        "basis": "complete_standard_list_observation",
+        "selected_at_observation": {
+          "product_id": "i2353933232-s13731699846",
+          "price_sgd_cents": 395,
+          "basis": "lowest displayed listed-pack price within this compatible set; refresh at runtime"
+        }
+      }
+    },
+    {
+      "id": "yogurt",
+      "label": "Yogurt",
+      "aliases": [
+        "yogurt"
+      ],
+      "meaning": "yogurt",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "note": "Flavour, sweetness and type are not specified. Clarify if the Standard candidates differ materially.",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "needs_confirmation",
+        "candidate_product_ids": [
+          "i3545577379-s23403551829",
+          "i301102820-s527098872",
+          "i301138805-s527224596"
+        ],
+        "basis": "complete_standard_list_observation",
+        "reason": "Standard has ordinary Greek-style yogurt in 500g/1kg and a high-protein 900g variant. Confirm whether all variants are acceptable; then compare current listed-pack prices. Ordinary 500g is the lowest displayed price today."
+      }
+    },
+    {
+      "id": "whole_chicken",
+      "label": "Whole chicken",
+      "aliases": [
+        "whole chicken"
+      ],
+      "meaning": "whole chicken",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "explicit_constraints": {
+        "cut": "whole"
+      },
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "not_found_in_standard",
+        "candidate_product_ids": [],
+        "basis": "complete_standard_list_observation",
+        "reason": "Only chicken breast and thigh cuts were observed, not a whole chicken."
+      }
+    },
+    {
+      "id": "dill",
+      "label": "Dill",
+      "aliases": [
+        "dill"
+      ],
+      "meaning": "dill",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "not_found_in_standard",
+        "candidate_product_ids": [],
+        "basis": "complete_standard_list_observation",
+        "reason": "Dill-flavoured pickles are not the dill herb."
+      }
+    },
+    {
+      "id": "feta",
+      "label": "Feta",
+      "aliases": [
+        "feta"
+      ],
+      "meaning": "feta cheese",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "not_found_in_standard",
+        "candidate_product_ids": [],
+        "basis": "complete_standard_list_observation",
+        "reason": "No compatible product found across all four Standard pages."
+      }
+    },
+    {
+      "id": "quinoa",
+      "label": "Quinoa",
+      "aliases": [
+        "quinoa"
+      ],
+      "meaning": "quinoa",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "not_found_in_standard",
+        "candidate_product_ids": [],
+        "basis": "complete_standard_list_observation",
+        "reason": "No compatible product found across all four Standard pages."
+      }
+    },
+    {
+      "id": "limes",
+      "label": "Limes",
+      "aliases": [
+        "lime",
+        "limes"
+      ],
+      "meaning": "limes",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "not_found_in_standard",
+        "candidate_product_ids": [],
+        "basis": "complete_standard_list_observation",
+        "reason": "Lemons are not limes."
+      }
+    },
+    {
+      "id": "baby_bread",
+      "label": "Baby bread",
+      "aliases": [
+        "{child} bread",
+        "baby bread",
+        "{child}'s bread"
+      ],
+      "meaning": "bread for child",
+      "status": "needs_confirmation",
+      "mentions_in_export": 2,
+      "provenance": "chat_export_and_assistant_normalization",
+      "question": "Which bread in Standard? Is it different from the household bread?",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "not_found_in_standard",
+        "candidate_product_ids": [],
+        "basis": "complete_standard_list_observation",
+        "reason": "No bread item found; household meaning also remains unconfirmed."
+      }
+    },
+    {
+      "id": "beans",
+      "label": "Beans",
+      "aliases": [
+        "beans"
+      ],
+      "meaning": "beans",
+      "status": "needs_confirmation",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "question": "Which kind of beans: green beans, canned/baked beans, dried beans, or another type?",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "needs_confirmation",
+        "candidate_product_ids": [
+          "i3501784896-s23137459401",
+          "i2856622171-s19691070848",
+          "i303976984-s538108492"
+        ],
+        "basis": "complete_standard_list_observation",
+        "reason": "Black beans, edamame and chickpeas are present; the intended kind cannot be established from the word beans. Coles black beans is a proposal only.",
+        "proposed_product_id": "i3501784896-s23137459401"
+      }
+    },
+    {
+      "id": "milk",
+      "label": "Milk",
+      "aliases": [
+        "milk"
+      ],
+      "meaning": "milk",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "note": "Milk type and variant are not specified. Clarify if the Standard candidates differ materially.",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "needs_confirmation",
+        "candidate_product_ids": [
+          "i301116841-s527198777",
+          "i301108837-s527088916"
+        ],
+        "basis": "complete_standard_list_observation",
+        "reason": "Fresh 450ml and lowfat 2L are materially different variants. Confirm the household meaning; do not select solely on price.",
+        "proposed_product_id": "i301108837-s527088916"
+      }
+    },
+    {
+      "id": "baby_milk",
+      "label": "Baby milk",
+      "aliases": [
+        "{child} milk",
+        "baby milk",
+        "{child}'s milk"
+      ],
+      "meaning": "milk for child",
+      "status": "needs_confirmation",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "question": "Which exact milk product and variant in Standard? Keep separate from generic milk until confirmed.",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "needs_confirmation",
+        "candidate_product_ids": [
+          "i301116841-s527198777",
+          "i301108837-s527088916"
+        ],
+        "basis": "complete_standard_list_observation",
+        "reason": "Private household meaning awaits confirmation.",
+        "proposed_product_id": "i301116841-s527198777"
+      }
+    },
+    {
+      "id": "baby_fruit",
+      "label": "Baby fruit",
+      "aliases": [
+        "{child} fruits",
+        "baby fruit",
+        "{child}'s fruits"
+      ],
+      "meaning": "fruit for child",
+      "status": "needs_confirmation",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "question": "Which fruits does this shorthand request? One named fruit, an approved choice set, or a fixed bundle?",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "needs_confirmation",
+        "candidate_product_ids": [
+          "i2869513133-s19815047214",
+          "i2691143551-s17787568296",
+          "i1204698721-s4844994260",
+          "i1204740553-s4845140502",
+          "i383996629-s906430096",
+          "i1548788612-s7249264792"
+        ],
+        "basis": "complete_standard_list_observation",
+        "reason": "List membership does not identify the requested fruit or authorize a mixed-fruit bundle. Ask which fruit(s)."
+      }
+    },
+    {
+      "id": "plain_flour",
+      "label": "Plain flour",
+      "aliases": [
+        "plain flour"
+      ],
+      "meaning": "plain flour",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "explicit_constraints": {
+        "type": "plain"
+      },
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "needs_confirmation",
+        "candidate_product_ids": [
+          "i301134811-s527214976"
+        ],
+        "basis": "complete_standard_list_observation",
+        "reason": "Prima Top Flour is extra-fine baking flour. Plain/all-purpose equivalence is unverified; do not substitute without clarification. Corn flour is incompatible."
+      }
+    },
+    {
+      "id": "tomato_paste",
+      "label": "Tomato paste",
+      "aliases": [
+        "tomato paste"
+      ],
+      "meaning": "tomato paste",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "not_found_in_standard",
+        "candidate_product_ids": [],
+        "basis": "complete_standard_list_observation",
+        "reason": "No compatible product found across all four Standard pages."
+      }
+    },
+    {
+      "id": "beef_stock_broth",
+      "label": "Beef stock / broth",
+      "aliases": [
+        "beef stock/ broth",
+        "beef stock / broth"
+      ],
+      "meaning": "beef stock or broth",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "note": "Keep distinct from the separately requested Knorr beef stock cubes; do not silently collapse them.",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "not_found_in_standard",
+        "candidate_product_ids": [],
+        "basis": "complete_standard_list_observation",
+        "reason": "No compatible product found across all four Standard pages."
+      }
+    },
+    {
+      "id": "knorr_beef_cubes",
+      "label": "Knorr beef stock cubes",
+      "aliases": [
+        "beef cubes knorr",
+        "knorr beef stock cubes"
+      ],
+      "meaning": "Knorr beef stock cubes",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "explicit_constraints": {
+        "brand": "Knorr",
+        "flavour": "beef",
+        "form": "stock cubes"
+      },
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "not_found_in_standard",
+        "candidate_product_ids": [],
+        "basis": "complete_standard_list_observation",
+        "reason": "No compatible product found across all four Standard pages."
+      }
+    },
+    {
+      "id": "grated_parmesan",
+      "label": "Grated Parmesan",
+      "aliases": [
+        "grated parmesan"
+      ],
+      "meaning": "grated Parmesan cheese",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "explicit_constraints": {
+        "cheese_type": "Parmesan",
+        "form": "grated"
+      },
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "not_found_in_standard",
+        "candidate_product_ids": [],
+        "basis": "complete_standard_list_observation",
+        "reason": "No compatible product found across all four Standard pages."
+      }
+    },
+    {
+      "id": "fresh_thyme",
+      "label": "Fresh thyme",
+      "aliases": [
+        "fresh tyme",
+        "fresh thyme"
+      ],
+      "meaning": "fresh thyme",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "explicit_constraints": {
+        "state": "fresh"
+      },
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "not_found_in_standard",
+        "candidate_product_ids": [],
+        "basis": "complete_standard_list_observation",
+        "reason": "No compatible product found across all four Standard pages."
+      }
+    },
+    {
+      "id": "carrots",
+      "label": "Carrots",
+      "aliases": [
+        "carrot",
+        "carrots",
+        "australian carrots",
+        "australian carrot",
+        "australia carrots"
+      ],
+      "meaning": "Australian carrots",
+      "status": "confirmed_meaning",
+      "mentions_in_export": 1,
+      "provenance": "explicit_user_confirmation_2026-10-28",
+      "note": "User selected RedMart Australian carrots 1kg. Added to Standard and verified. The earlier purchase-history observation is historical; it predates this addition.",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-carrots-addition",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i303974834-s538082888"
+        ],
+        "basis": "user_confirmed_product_and_verified_standard_membership",
+        "selected_at_observation": {
+          "product_id": "i303974834-s538082888",
+          "price_sgd_cents": 200,
+          "basis": "user-confirmed product; refresh live membership, stock and price"
+        }
+      },
+      "purchase_history_observation": {
+        "observed_on": "2026-10-28",
+        "source": "RedMart Past Purchases search for carrot",
+        "products": [
+          {
+            "id": "i303974834-s538082888",
+            "name": "RedMart Carrots 1KG Australia",
+            "pack": "1 kg",
+            "price_sgd_cents": 200,
+            "url": "https://www.lazada.sg/products/pdp-i303974834-s538082888.html"
+          },
+          {
+            "id": "i303274117-s536558472",
+            "name": "USA Baby Carrots",
+            "pack": "250 g",
+            "price_sgd_cents": 295,
+            "url": "https://www.lazada.sg/products/pdp-i303274117-s536558472.html"
+          }
+        ],
+        "purchase_dates": "Not displayed in this view; do not infer dates from current product prices.",
+        "standard_membership": false,
+        "action": "Read-only history lookup. No carrot product was added to Standard or the cart."
+      },
+      "meaning_history": [
+        {
+          "meaning": "carrots",
+          "status": "normalized_meaning",
+          "provenance": "chat_export_and_assistant_normalization"
+        }
+      ],
+      "catalogue_match_history": [
+        {
+          "snapshot_id": "standard-2026-10-28-r2",
+          "status": "not_found_in_standard",
+          "candidate_product_ids": [],
+          "basis": "complete_standard_list_observation",
+          "reason": "Both Australian carrots 1kg and USA baby carrots 250g appear in Past Purchases, but neither is in the refreshed complete Standard list."
+        }
+      ],
+      "explicit_constraints": {
+        "origin": "Australia"
+      },
+      "confirmed_product_preference": {
+        "product_id": "i303974834-s538082888",
+        "name": "RedMart Carrots 1KG Australia",
+        "pack": "1 kg",
+        "confirmed_on": "2026-10-28",
+        "source": "User selected Australian Carrots after being shown the Australian 1kg and USA baby carrot 250g options.",
+        "requires_live_standard_membership": true
+      },
+      "standard_list_addition": {
+        "requested_on": "2026-10-28",
+        "verified_on": "2026-10-28",
+        "product_id": "i303974834-s538082888"
+      }
+    },
+    {
+      "id": "peanut_oil",
+      "label": "Peanut oil",
+      "aliases": [
+        "peanut oil"
+      ],
+      "meaning": "peanut / groundnut oil",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "note": "A Knife groundnut-oil product was observed on 2026-10-14. The generic request does not establish a permanent Knife brand restriction.",
+      "historical_product_hint": {
+        "observed_on": "2026-10-14",
+        "product": "Knife 100 Percent Groundnut Oil Cooking Oil - 1L",
+        "pack": "1 L",
+        "url": "https://www.lazada.sg/products/pdp-i303624723-s537270932.html"
+      },
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i303624723-s537270932"
+        ],
+        "basis": "complete_standard_list_observation",
+        "selected_at_observation": {
+          "product_id": "i303624723-s537270932",
+          "price_sgd_cents": 733,
+          "basis": "lowest displayed listed-pack price within this compatible set; refresh at runtime"
+        }
+      }
+    },
+    {
+      "id": "strawberries",
+      "label": "Strawberries",
+      "aliases": [
+        "strawberry",
+        "strawberries"
+      ],
+      "meaning": "strawberries",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "note": "Frozen strawberries were observed in Standard on 2026-10-14. That is a historical candidate hint, not a permanent fresh/frozen constraint, SKU choice or price.",
+      "historical_product_hint": {
+        "observed_on": "2026-10-14",
+        "product": "ARDO Strawberries - Frozen",
+        "pack": "1 kg",
+        "url": "https://www.lazada.sg/products/pdp-i2691143551-s17787568296.html"
+      },
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i2691143551-s17787568296",
+          "i1204698721-s4844994260"
+        ],
+        "basis": "complete_standard_list_observation",
+        "selected_at_observation": {
+          "product_id": "i2691143551-s17787568296",
+          "price_sgd_cents": 1121,
+          "basis": "lowest displayed listed-pack price within this compatible set; refresh at runtime"
+        }
+      }
+    },
+    {
+      "id": "bread",
+      "label": "Bread",
+      "aliases": [
+        "bread"
+      ],
+      "meaning": "bread",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "note": "Bread type is not specified; do not merge with Baby bread without confirmation.",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "not_found_in_standard",
+        "candidate_product_ids": [],
+        "basis": "complete_standard_list_observation",
+        "reason": "No compatible product found across all four Standard pages."
+      }
+    },
+    {
+      "id": "avocados",
+      "label": "Avocados",
+      "aliases": [
+        "avocado",
+        "avocados"
+      ],
+      "meaning": "avocados",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "not_found_in_standard",
+        "candidate_product_ids": [],
+        "basis": "complete_standard_list_observation",
+        "reason": "No compatible product found across all four Standard pages."
+      }
+    },
+    {
+      "id": "pasta",
+      "label": "Pasta",
+      "aliases": [
+        "pasta"
+      ],
+      "meaning": "pasta",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "note": "Shape/type is not specified; do not merge with Baby pasta without confirmation.",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "needs_confirmation",
+        "candidate_product_ids": [
+          "i301116671-s527198512"
+        ],
+        "basis": "complete_standard_list_observation",
+        "reason": "Only Bellamy's vegetable spirals 110g is in Standard. Confirm whether generic Pasta means this same product as Baby pasta."
+      }
+    },
+    {
+      "id": "baby_oats",
+      "label": "Baby oats",
+      "aliases": [
+        "{child} oats",
+        "baby oats",
+        "{child}'s oats"
+      ],
+      "meaning": "oats for child",
+      "status": "needs_confirmation",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "question": "Which oats in Standard? Are these the same as Baby instant oats or a different product?",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "needs_confirmation",
+        "candidate_product_ids": [
+          "i304188338-s538348790"
+        ],
+        "basis": "complete_standard_list_observation",
+        "reason": "Confirm whether this private label means the same instant oats product. Currently sold out.",
+        "proposed_product_id": "i304188338-s538348790"
+      }
+    },
+    {
+      "id": "asparagus",
+      "label": "Asparagus",
+      "aliases": [
+        "asparagus"
+      ],
+      "meaning": "asparagus",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "not_found_in_standard",
+        "candidate_product_ids": [],
+        "basis": "complete_standard_list_observation",
+        "reason": "No compatible product found across all four Standard pages."
+      }
+    },
+    {
+      "id": "baby_pasta",
+      "label": "Baby pasta",
+      "aliases": [
+        "{child} pasta",
+        "baby pasta",
+        "{child}'s pasta"
+      ],
+      "meaning": "pasta for child",
+      "status": "needs_confirmation",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "question": "Which pasta in Standard? Is it different from the household pasta?",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "needs_confirmation",
+        "candidate_product_ids": [
+          "i301116671-s527198512"
+        ],
+        "basis": "complete_standard_list_observation",
+        "reason": "Private household meaning awaits confirmation.",
+        "proposed_product_id": "i301116671-s527198512"
+      }
+    },
+    {
+      "id": "baby_butter",
+      "label": "Baby butter",
+      "aliases": [
+        "{child} butter",
+        "baby butter",
+        "{child}'s butter"
+      ],
+      "meaning": "butter for child",
+      "status": "needs_confirmation",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "question": "Which butter in Standard? Do not assume it means the listed salted butter.",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "needs_confirmation",
+        "candidate_product_ids": [
+          "i301164069-s527250305",
+          "i304352167-s538576047"
+        ],
+        "basis": "complete_standard_list_observation",
+        "reason": "Unsalted SCS and salted Amul are present. Unsalted is a proposal, not an inferred child preference.",
+        "proposed_product_id": "i301164069-s527250305"
+      }
+    },
+    {
+      "id": "baby_instant_oats",
+      "label": "Baby instant oats",
+      "aliases": [
+        "{child} instant oats",
+        "baby instant oats",
+        "{child}'s instant oats"
+      ],
+      "meaning": "instant oats for child",
+      "status": "needs_confirmation",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "question": "Which instant oats in Standard? Confirm whether Baby oats is an alias for the same product.",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "needs_confirmation",
+        "candidate_product_ids": [
+          "i304188338-s538348790"
+        ],
+        "basis": "complete_standard_list_observation",
+        "reason": "Private household meaning awaits confirmation. Currently sold out.",
+        "proposed_product_id": "i304188338-s538348790"
+      }
+    },
+    {
+      "id": "baby_laundry",
+      "label": "Baby laundry",
+      "aliases": [
+        "{child} laundy",
+        "baby laundry",
+        "{child}'s laundy",
+        "{child} laundry",
+        "{child}'s laundry",
+        "baby laundy",
+        "komodo laundry",
+        "kodomo laundry",
+        "kodomo baby laundry"
+      ],
+      "meaning": "Kodomo baby laundry detergent",
+      "status": "confirmed_meaning",
+      "mentions_in_export": 1,
+      "provenance": "prior_explicit_user_confirmation",
+      "note": "Prior user meaning used the spelling Komodo. Standard verifies the catalogue spelling Kodomo and Nature Care Refill 1L. Spelling correction is catalogue-grounded; the household association was already explicitly confirmed.",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i301158117-s527196131"
+        ],
+        "basis": "complete_standard_list_observation",
+        "selected_at_observation": {
+          "product_id": "i301158117-s527196131",
+          "price_sgd_cents": 754,
+          "basis": "lowest displayed listed-pack price within this compatible set; refresh at runtime"
+        }
+      }
+    },
+    {
+      "id": "adult_laundry",
+      "label": "Adult laundry",
+      "aliases": [
+        "addult laundry",
+        "adult laundry"
+      ],
+      "meaning": "adult / household laundry product",
+      "status": "needs_confirmation",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "question": "Which household laundry product in Standard? Keep separate from Baby laundry.",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "needs_confirmation",
+        "candidate_product_ids": [
+          "i2000709036-s10863413745"
+        ],
+        "basis": "complete_standard_list_observation",
+        "reason": "Only non-baby laundry detergent observed; private household association awaits confirmation.",
+        "proposed_product_id": "i2000709036-s10863413745"
+      }
+    },
+    {
+      "id": "large_rubbish_bags",
+      "label": "Large rubbish bags",
+      "aliases": [
+        "rubbish bag big",
+        "large rubbish bags"
+      ],
+      "meaning": "large rubbish bags",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "explicit_constraints": {
+        "size_description": "big / large; exact dimensions unresolved"
+      },
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i305094397-s541184904"
+        ],
+        "basis": "complete_standard_list_observation",
+        "selected_at_observation": {
+          "product_id": "i305094397-s541184904",
+          "price_sgd_cents": 605,
+          "basis": "lowest displayed listed-pack price within this compatible set; refresh at runtime"
+        }
+      }
+    },
+    {
+      "id": "oyster_sauce",
+      "label": "Oyster sauce",
+      "aliases": [
+        "oyster sauce"
+      ],
+      "meaning": "oyster sauce",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i301130400-s527192377"
+        ],
+        "basis": "complete_standard_list_observation",
+        "selected_at_observation": {
+          "product_id": "i301130400-s527192377",
+          "price_sgd_cents": 398,
+          "basis": "lowest displayed listed-pack price within this compatible set; refresh at runtime"
+        }
+      }
+    },
+    {
+      "id": "fish",
+      "label": "Fish",
+      "aliases": [
+        "fish"
+      ],
+      "meaning": "fish",
+      "status": "needs_confirmation",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "question": "Does the adjacent Fish / Sauce text mean fish sauce as one item? If fish is separate, which species/form?",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "needs_confirmation",
+        "candidate_product_ids": [
+          "i301084919-s527112320",
+          "i301116616-s527198448"
+        ],
+        "basis": "complete_standard_list_observation",
+        "reason": "Adjacent Fish and Sauce may mean fish sauce as one item. Until confirmed, canned tuna and fish sauce are possibilities, not interchangeable products.",
+        "proposed_product_id": "i301116616-s527198448"
+      }
+    },
+    {
+      "id": "sauce",
+      "label": "Sauce",
+      "aliases": [
+        "sauce"
+      ],
+      "meaning": "sauce",
+      "status": "needs_confirmation",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "question": "Does the adjacent Fish / Sauce text mean fish sauce as one item? If sauce is separate, which sauce?",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "needs_confirmation",
+        "candidate_product_ids": [
+          "i301116616-s527198448",
+          "i301130400-s527192377",
+          "i301198032-s527268221",
+          "i301142979-s527234863"
+        ],
+        "basis": "complete_standard_list_observation",
+        "reason": "Await confirmation that adjacent Fish and Sauce form one request; otherwise ask which sauce.",
+        "proposed_product_id": "i301116616-s527198448"
+      }
+    },
+    {
+      "id": "ironing_starch_spray",
+      "label": "Ironing starch spray",
+      "aliases": [
+        "starch easy iron spray",
+        "ironing starch spray"
+      ],
+      "meaning": "ironing starch spray",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "explicit_constraints": {
+        "type": "starch",
+        "form": "spray"
+      },
+      "note": "Treat 'easy iron' as descriptive wording; no specific brand is confirmed.",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "not_found_in_standard",
+        "candidate_product_ids": [],
+        "basis": "complete_standard_list_observation",
+        "reason": "No ironing starch spray in Standard."
+      }
+    },
+    {
+      "id": "peas",
+      "label": "Peas",
+      "aliases": [
+        "peas"
+      ],
+      "meaning": "peas",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i301158803-s527244401"
+        ],
+        "basis": "complete_standard_list_observation",
+        "selected_at_observation": {
+          "product_id": "i301158803-s527244401",
+          "price_sgd_cents": 810,
+          "basis": "lowest displayed listed-pack price within this compatible set; refresh at runtime"
+        }
+      }
+    },
+    {
+      "id": "diapers",
+      "label": "Diapers",
+      "aliases": [
+        "diaper",
+        "diapers"
+      ],
+      "meaning": "diapers",
+      "status": "needs_confirmation",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "question": "Which brand, size and style (pants or taped) from Standard?",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "needs_confirmation",
+        "candidate_product_ids": [
+          "i2336882199-s13593375593"
+        ],
+        "basis": "complete_standard_list_observation",
+        "reason": "Only Merries First Premium Pants M 46s observed. Confirm current size/style before creating a household default.",
+        "proposed_product_id": "i2336882199-s13593375593"
+      }
+    },
+    {
+      "id": "kitchen_roll",
+      "label": "Kitchen roll",
+      "aliases": [
+        "kitchen roll"
+      ],
+      "meaning": "kitchen paper towels",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i301122694-s527206520"
+        ],
+        "basis": "complete_standard_list_observation",
+        "selected_at_observation": {
+          "product_id": "i301122694-s527206520",
+          "price_sgd_cents": 610,
+          "basis": "lowest displayed listed-pack price within this compatible set; refresh at runtime"
+        }
+      }
+    },
+    {
+      "id": "tissue_boxes",
+      "label": "Tissue boxes",
+      "aliases": [
+        "tissuebox",
+        "tissue boxes"
+      ],
+      "meaning": "boxed facial tissues",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "needs_confirmation",
+        "candidate_product_ids": [
+          "i2580753655-s16319731399"
+        ],
+        "basis": "complete_standard_list_observation",
+        "reason": "Facial tissues found, but boxed packaging is not verified. Confirm that these soft tissue packs are what Tissuebox means."
+      }
+    },
+    {
+      "id": "toilet_roll",
+      "label": "Toilet roll",
+      "aliases": [
+        "toilet roll"
+      ],
+      "meaning": "toilet paper rolls",
+      "status": "normalized_meaning",
+      "mentions_in_export": 1,
+      "provenance": "chat_export_and_assistant_normalization",
+      "catalogue_match": {
+        "snapshot_id": "standard-2026-10-28-r2",
+        "status": "matched",
+        "candidate_product_ids": [
+          "i301100875-s527118150"
+        ],
+        "basis": "complete_standard_list_observation",
+        "selected_at_observation": {
+          "product_id": "i301100875-s527118150",
+          "price_sgd_cents": 1434,
+          "basis": "lowest displayed listed-pack price within this compatible set; refresh at runtime"
+        }
+      }
+    }
+  ],
+  "catalogue_observation": {
+    "snapshot_id": "standard-2026-10-28-r2",
+    "file": "martie-standard-list-2026-10-28-r2.json",
+    "observed_on": "2026-10-28",
+    "list_name": "Standard",
+    "products": 79,
+    "pages": 4,
+    "complete": true,
+    "match_counts": {
+      "matched": 17,
+      "matched_sold_out": 1,
+      "needs_confirmation": 16,
+      "not_found_in_standard": 16
+    }
+  },
+  "catalogue_status_guide": {
+    "matched": "Clear compatible candidate set observed; selected_at_observation is a price example only, never an active or permanent SKU binding.",
+    "matched_sold_out": "Clear match exists in Standard, but every matching card was marked sold out.",
+    "needs_confirmation": "Only proposed candidates; no automatic selection or permanent household preference is authorized.",
+    "not_found_in_standard": "No compatible item found in the complete dated snapshot; skip on this evidence and recheck on future requests."
+  },
+  "change_log": [
+    {
+      "on": "2026-10-28",
+      "change": "Added four requested products to Standard and verified all 79 current list entries; recorded the user-confirmed Pisang meaning; found two carrot products in Past Purchases without changing carrot eligibility."
+    },
+    {
+      "on": "2026-10-28",
+      "change": "User confirmed Australian carrots; added RedMart Carrots 1KG Australia to Standard, verified membership, and updated the carrot mapping."
+    }
+  ],
+  "catalogue_observation_supplements": [
+    {
+      "snapshot_id": "standard-2026-10-28-carrots-addition",
+      "file": "martie-standard-carrots-addition-2026-10-28.json",
+      "observed_on": "2026-10-28",
+      "scope": "single_product_membership_verification",
+      "product_ids": [
+        "i303974834-s538082888"
+      ]
+    }
+  ],
+  "current_match_counts": {
+    "matched": 18,
+    "matched_sold_out": 1,
+    "needs_confirmation": 16,
+    "not_found_in_standard": 15
+  }
+}

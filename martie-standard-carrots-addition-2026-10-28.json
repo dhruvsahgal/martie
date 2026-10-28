@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "standard-2026-10-28-carrots-addition",
+  "observed_on": "2026-10-28",
+  "list_name": "Standard",
+  "scope": "single_product_membership_verification",
+  "complete": false,
+  "baseline_snapshot_id": "standard-2026-10-28-r2",
+  "products": [
+    {
+      "id": "i303974834-s538082888",
+      "name": "RedMart Carrots 1KG Australia",
+      "pack": "1 kg",
+      "price_sgd_cents": 200,
+      "stock": "not_marked_sold_out",
+      "url": "https://www.lazada.sg/products/pdp-i303974834-s538082888.html"
+    }
+  ],
+  "action": "User selected Australian carrots; added this product to Standard and verified it on Standard page 1 with a Remove list control. No cart changes.",
+  "usage": "Supplements the previous complete snapshot. Only this product was rechecked; refresh the complete live list before processing an order."
+}

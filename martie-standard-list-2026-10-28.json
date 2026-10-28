@@ -1,0 +1,785 @@
+{
+  "schema_version": 1,
+  "snapshot_id": "standard-2026-10-28",
+  "observed_on": "2026-10-28",
+  "timezone": "Asia/Singapore",
+  "list_name": "Standard",
+  "list_type": "CUSTOM",
+  "source": "Signed-in RedMart Standard list, rendered browser DOM; product pages used only to inspect observed list products.",
+  "complete": true,
+  "page_product_counts": [
+    20,
+    20,
+    20,
+    15
+  ],
+  "product_count": 75,
+  "completion_evidence": "Pages 1–4 read; page 4 displayed as active with the next-page arrow disabled. Duplicate stale page-3 capture discarded.",
+  "usage": "Dated evidence only. Refresh complete Standard membership, availability and displayed prices before any cart action. No cart additions requested or performed by this mapping task.",
+  "price_basis": "Displayed single listed-pack price in SGD cents, without applying conditional multi-buy, spend or coupon offers.",
+  "stock_basis": "sold_out is an explicit card label; not_marked_sold_out is not a delivery-slot or checkout stock guarantee.",
+  "products": [
+    {
+      "id": "i2869513133-s19815047214",
+      "name": "ARDO Blueberries - Frozen",
+      "pack": "1 kg",
+      "price_sgd_cents": 1121,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 1,
+      "url": "https://www.lazada.sg/products/pdp-i2869513133-s19815047214.html"
+    },
+    {
+      "id": "i301158117-s527196131",
+      "name": "Kodomo Baby Laundry Detergent Nature Care Refill 1L",
+      "pack": "1 L",
+      "price_sgd_cents": 754,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 2,
+      "url": "https://www.lazada.sg/products/pdp-i301158117-s527196131.html"
+    },
+    {
+      "id": "i2000659385-s10863526265",
+      "name": "Bio-Home Dishwashing Liquid Refill Pack 450ML - Lemongrass & Green Tea",
+      "pack": "450 ml",
+      "price_sgd_cents": 325,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 3,
+      "url": "https://www.lazada.sg/products/pdp-i2000659385-s10863526265.html"
+    },
+    {
+      "id": "i2691143551-s17787568296",
+      "name": "ARDO Strawberries - Frozen",
+      "pack": "1 kg",
+      "price_sgd_cents": 1121,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 4,
+      "url": "https://www.lazada.sg/products/pdp-i2691143551-s17787568296.html"
+    },
+    {
+      "id": "i2368655652-s13850649189",
+      "name": "S-Pure Fresh Chicken Skinless Boneless Breast",
+      "pack": "400 g",
+      "price_sgd_cents": 808,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 5,
+      "url": "https://www.lazada.sg/products/pdp-i2368655652-s13850649189.html"
+    },
+    {
+      "id": "i301144742-s527204845",
+      "name": "Mini Babybel Cheese 5 PCS",
+      "pack": "100 g",
+      "price_sgd_cents": 695,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 6,
+      "url": "https://www.lazada.sg/products/pdp-i301144742-s527204845.html"
+    },
+    {
+      "id": "i2856622171-s19691070848",
+      "name": "Shirakiku Frozen Edamame - Frozen",
+      "pack": "400 g",
+      "price_sgd_cents": 247,
+      "stock": "sold_out",
+      "page": 1,
+      "position": 7,
+      "url": "https://www.lazada.sg/products/pdp-i2856622171-s19691070848.html"
+    },
+    {
+      "id": "i304352167-s538576047",
+      "name": "Amul Salted Butter - Frozen",
+      "pack": "500 g",
+      "price_sgd_cents": 896,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 8,
+      "url": "https://www.lazada.sg/products/pdp-i304352167-s538576047.html"
+    },
+    {
+      "id": "i2353933232-s13731699846",
+      "name": "Gold+ Australia Celery 1KG",
+      "pack": "1 kg",
+      "price_sgd_cents": 395,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 9,
+      "url": "https://www.lazada.sg/products/pdp-i2353933232-s13731699846.html"
+    },
+    {
+      "id": "i3545577379-s23403551829",
+      "name": "Farmers Union Greek Style All Natural High Protein Yogurt 900G",
+      "pack": "900 g",
+      "price_sgd_cents": 965,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 10,
+      "url": "https://www.lazada.sg/products/pdp-i3545577379-s23403551829.html"
+    },
+    {
+      "id": "i301116634-s527198475",
+      "name": "Harpic Lemon Zest Toilet Bowl Cleaner Disinfectant Liquid 500ML Value Pack 3PCS",
+      "pack": "3 × 500 ml",
+      "price_sgd_cents": 790,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 11,
+      "url": "https://www.lazada.sg/products/pdp-i301116634-s527198475.html"
+    },
+    {
+      "id": "i301134811-s527214976",
+      "name": "Prima Top Flour 1KG",
+      "pack": "1 kg",
+      "price_sgd_cents": 295,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 12,
+      "url": "https://www.lazada.sg/products/pdp-i301134811-s527214976.html"
+    },
+    {
+      "id": "i2670962531-s17419293643",
+      "name": "Nivea Body Aloe And Hydration Body Lotion 400ML",
+      "pack": "1 per pack",
+      "price_sgd_cents": 1020,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 13,
+      "url": "https://www.lazada.sg/products/pdp-i2670962531-s17419293643.html"
+    },
+    {
+      "id": "i2670960793-s17419278940",
+      "name": "Nivea Deodorant Female Extra Brightening Roll On 50ML",
+      "pack": "1 per pack",
+      "price_sgd_cents": 496,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 14,
+      "url": "https://www.lazada.sg/products/pdp-i2670960793-s17419278940.html"
+    },
+    {
+      "id": "i301198032-s527268221",
+      "name": "Kewpie Japanese Style Mayonnaise",
+      "pack": "310 ml",
+      "price_sgd_cents": 529,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 15,
+      "url": "https://www.lazada.sg/products/pdp-i301198032-s527268221.html"
+    },
+    {
+      "id": "i301142642-s527234175",
+      "name": "KUHNE Pickled Gherkins",
+      "pack": "670 g",
+      "price_sgd_cents": 626,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 16,
+      "url": "https://www.lazada.sg/products/pdp-i301142642-s527234175.html"
+    },
+    {
+      "id": "i301084919-s527112320",
+      "name": "Ayam Brand Tuna Chunks in Water",
+      "pack": "150 g",
+      "price_sgd_cents": 348,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 17,
+      "url": "https://www.lazada.sg/products/pdp-i301084919-s527112320.html"
+    },
+    {
+      "id": "i301078910-s527100805",
+      "name": "Dove Beauty Nourishing Moisture Body Wash 1L",
+      "pack": "1 L",
+      "price_sgd_cents": 520,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 18,
+      "url": "https://www.lazada.sg/products/pdp-i301078910-s527100805.html"
+    },
+    {
+      "id": "i301150221-s527186582",
+      "name": "Dove Straight and Silky Conditioner",
+      "pack": "660 ml",
+      "price_sgd_cents": 735,
+      "stock": "not_marked_sold_out",
+      "page": 1,
+      "position": 19,
+      "url": "https://www.lazada.sg/products/pdp-i301150221-s527186582.html"
+    },
+    {
+      "id": "i304188338-s538348790",
+      "name": "Bob's Red Mill Whole Grain Instant Rolled Oats",
+      "pack": "907 g",
+      "price_sgd_cents": 990,
+      "stock": "sold_out",
+      "page": 1,
+      "position": 20,
+      "url": "https://www.lazada.sg/products/pdp-i304188338-s538348790.html"
+    },
+    {
+      "id": "i301106805-s527124105",
+      "name": "Pagoda Fine Salt",
+      "pack": "500 g",
+      "price_sgd_cents": 70,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 1,
+      "url": "https://www.lazada.sg/products/pdp-i301106805-s527124105.html"
+    },
+    {
+      "id": "i1640334474-s7708134927",
+      "name": "Glad Non-Stick Aluminum Foil 5M",
+      "pack": "1 per pack",
+      "price_sgd_cents": 463,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 2,
+      "url": "https://www.lazada.sg/products/pdp-i1640334474-s7708134927.html"
+    },
+    {
+      "id": "i303554637-s537198406",
+      "name": "Glad Cook & Bake Paper 10m",
+      "pack": "1 per pack",
+      "price_sgd_cents": 715,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 3,
+      "url": "https://www.lazada.sg/products/pdp-i303554637-s537198406.html"
+    },
+    {
+      "id": "i328592389-s698926532",
+      "name": "RedMan Pumpkin Seed Kernel",
+      "pack": "250 g",
+      "price_sgd_cents": 425,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 4,
+      "url": "https://www.lazada.sg/products/pdp-i328592389-s698926532.html"
+    },
+    {
+      "id": "i301126418-s527208099",
+      "name": "NATURE'S WONDERS Baked USA Walnuts",
+      "pack": "200 g",
+      "price_sgd_cents": 764,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 5,
+      "url": "https://www.lazada.sg/products/pdp-i301126418-s527208099.html"
+    },
+    {
+      "id": "i301120477-s527190523",
+      "name": "Magiclean Aromatic Lavender Floor Cleaner 3L",
+      "pack": "3 L",
+      "price_sgd_cents": 755,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 6,
+      "url": "https://www.lazada.sg/products/pdp-i301120477-s527190523.html"
+    },
+    {
+      "id": "i301080965-s527102808",
+      "name": "OSK 100% Japanese Green Tea 50 Pieces",
+      "pack": "50 per pack",
+      "price_sgd_cents": 890,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 7,
+      "url": "https://www.lazada.sg/products/pdp-i301080965-s527102808.html"
+    },
+    {
+      "id": "i305082517-s541196813",
+      "name": "BIOGREEN Biodegradable Garbage Bag (S) - (L555 x W450)MM (BD-GB1922/2-50)",
+      "pack": "100 per pack",
+      "price_sgd_cents": 605,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 8,
+      "url": "https://www.lazada.sg/products/pdp-i305082517-s541196813.html"
+    },
+    {
+      "id": "i1706002790-s8291111043",
+      "name": "[TWIN PACK] Magiclean Bathroom Stain and Mold Remover Refill 400G X 2",
+      "pack": "2 × 400 ml",
+      "price_sgd_cents": 875,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 9,
+      "url": "https://www.lazada.sg/products/pdp-i1706002790-s8291111043.html"
+    },
+    {
+      "id": "i301134296-s527170938",
+      "name": "Flying Man Corn Flour",
+      "pack": "400 g",
+      "price_sgd_cents": 111,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 10,
+      "url": "https://www.lazada.sg/products/pdp-i301134296-s527170938.html"
+    },
+    {
+      "id": "i301086829-s527108209",
+      "name": "RedMart Romaine Lettuce Salad",
+      "pack": "350 g",
+      "price_sgd_cents": 233,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 11,
+      "url": "https://www.lazada.sg/products/pdp-i301086829-s527108209.html"
+    },
+    {
+      "id": "i301136893-s527236437",
+      "name": "Narcissus Rice Vinegar",
+      "pack": "600 g",
+      "price_sgd_cents": 168,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 12,
+      "url": "https://www.lazada.sg/products/pdp-i301136893-s527236437.html"
+    },
+    {
+      "id": "i303620347-s537268364",
+      "name": "Supreme Dragon Gourmet Rice Wine",
+      "pack": "630 ml",
+      "price_sgd_cents": 325,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 13,
+      "url": "https://www.lazada.sg/products/pdp-i303620347-s537268364.html"
+    },
+    {
+      "id": "i301090893-s527132067",
+      "name": "Local Cucumber",
+      "pack": "300 g",
+      "price_sgd_cents": 202,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 14,
+      "url": "https://www.lazada.sg/products/pdp-i301090893-s527132067.html"
+    },
+    {
+      "id": "i327250341-s692072902",
+      "name": "RedMart Japanese Cucumber",
+      "pack": "400 g",
+      "price_sgd_cents": 180,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 15,
+      "url": "https://www.lazada.sg/products/pdp-i327250341-s692072902.html"
+    },
+    {
+      "id": "i301150276-s527186671",
+      "name": "S&W Distilled White Vinegar",
+      "pack": "473 ml",
+      "price_sgd_cents": 282,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 16,
+      "url": "https://www.lazada.sg/products/pdp-i301150276-s527186671.html"
+    },
+    {
+      "id": "i1548788612-s7249264792",
+      "name": "RedMart Unwaxed Lemons",
+      "pack": "650 g",
+      "price_sgd_cents": 515,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 17,
+      "url": "https://www.lazada.sg/products/pdp-i1548788612-s7249264792.html"
+    },
+    {
+      "id": "i1204698721-s4844994260",
+      "name": "Golden Garden Strawberries - Frozen",
+      "pack": "1 kg",
+      "price_sgd_cents": 1291,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 18,
+      "url": "https://www.lazada.sg/products/pdp-i1204698721-s4844994260.html"
+    },
+    {
+      "id": "i301102820-s527098872",
+      "name": "Farmers Union Greek Style All Natural Yoghurt 1KG",
+      "pack": "1 kg",
+      "price_sgd_cents": 965,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 19,
+      "url": "https://www.lazada.sg/products/pdp-i301102820-s527098872.html"
+    },
+    {
+      "id": "i301116841-s527198777",
+      "name": "Meiji Fresh Milk 450 ML",
+      "pack": "450 ml",
+      "price_sgd_cents": 247,
+      "stock": "not_marked_sold_out",
+      "page": 2,
+      "position": 20,
+      "url": "https://www.lazada.sg/products/pdp-i301116841-s527198777.html"
+    },
+    {
+      "id": "i301156558-s527210572",
+      "name": "Camel Natural Baked Almonds",
+      "pack": "400 g",
+      "price_sgd_cents": 1211,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 1,
+      "url": "https://www.lazada.sg/products/pdp-i301156558-s527210572.html"
+    },
+    {
+      "id": "i1960590504-s10531677365",
+      "name": "USA Idaho Russet Potato 1KG",
+      "pack": "1 kg",
+      "price_sgd_cents": 450,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 2,
+      "url": "https://www.lazada.sg/products/pdp-i1960590504-s10531677365.html"
+    },
+    {
+      "id": "i3356756733-s22446541497",
+      "name": "RedMart NZ Cage Free Eggs (12x50g)",
+      "pack": "12 × 50 g",
+      "price_sgd_cents": 827,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 3,
+      "url": "https://www.lazada.sg/products/pdp-i3356756733-s22446541497.html"
+    },
+    {
+      "id": "i301108837-s527088916",
+      "name": "Meiji Lowfat Milk 2L",
+      "pack": "2 L",
+      "price_sgd_cents": 670,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 4,
+      "url": "https://www.lazada.sg/products/pdp-i301108837-s527088916.html"
+    },
+    {
+      "id": "i301168260-s527252610",
+      "name": "RedMart Anti-Bacterial Lavender Foaming Handwash Hand Soap Wash",
+      "pack": "250 ml",
+      "price_sgd_cents": 252,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 5,
+      "url": "https://www.lazada.sg/products/pdp-i301168260-s527252610.html"
+    },
+    {
+      "id": "i304258712-s538458961",
+      "name": "Komachi Japonica Short Grain Rice - 1KG",
+      "pack": "1 kg",
+      "price_sgd_cents": 420,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 6,
+      "url": "https://www.lazada.sg/products/pdp-i304258712-s538458961.html"
+    },
+    {
+      "id": "i303694586-s537390311",
+      "name": "SongHe Whole Kernel Thai Hom Mali Rice 2KG (New Crop)",
+      "pack": "2 kg",
+      "price_sgd_cents": 820,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 7,
+      "url": "https://www.lazada.sg/products/pdp-i303694586-s537390311.html"
+    },
+    {
+      "id": "i301146957-s527220979",
+      "name": "Naturel Organic Brown Rice - 2KG",
+      "pack": "2 kg",
+      "price_sgd_cents": 1034,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 8,
+      "url": "https://www.lazada.sg/products/pdp-i301146957-s527220979.html"
+    },
+    {
+      "id": "i301192160-s527276243",
+      "name": "Borges Extra Virgin Olive Oil - 2L",
+      "pack": "2 L",
+      "price_sgd_cents": 3290,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 9,
+      "url": "https://www.lazada.sg/products/pdp-i301192160-s527276243.html"
+    },
+    {
+      "id": "i2000709036-s10863413745",
+      "name": "Bio-Home Delicate Laundry Liquid Refill Pack 900ML - Hyacinth & Nectarine",
+      "pack": "900 ml",
+      "price_sgd_cents": 708,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 10,
+      "url": "https://www.lazada.sg/products/pdp-i2000709036-s10863413745.html"
+    },
+    {
+      "id": "i3501784896-s23137459401",
+      "name": "Coles Black Beans 420g",
+      "pack": "420 g",
+      "price_sgd_cents": 297,
+      "stock": "sold_out",
+      "page": 3,
+      "position": 11,
+      "url": "https://www.lazada.sg/products/pdp-i3501784896-s23137459401.html"
+    },
+    {
+      "id": "i303976984-s538108492",
+      "name": "RedMart Organic Chickpeas (Kabuli Chana)",
+      "pack": "1 kg",
+      "price_sgd_cents": 715,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 12,
+      "url": "https://www.lazada.sg/products/pdp-i303976984-s538108492.html"
+    },
+    {
+      "id": "i3530098717-s23274499535",
+      "name": "Coles Corn Kernels No Added Salt 420g",
+      "pack": "420 g",
+      "price_sgd_cents": 306,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 13,
+      "url": "https://www.lazada.sg/products/pdp-i3530098717-s23274499535.html"
+    },
+    {
+      "id": "i303698031-s537374146",
+      "name": "ThyGrace Yellow Onions",
+      "pack": "500 g",
+      "price_sgd_cents": 146,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 14,
+      "url": "https://www.lazada.sg/products/pdp-i303698031-s537374146.html"
+    },
+    {
+      "id": "i3505769500-s23153991641",
+      "name": "Vlasic Kosher Dill Spears Pickles",
+      "pack": "710 ml",
+      "price_sgd_cents": 885,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 15,
+      "url": "https://www.lazada.sg/products/pdp-i3505769500-s23153991641.html"
+    },
+    {
+      "id": "i301142979-s527234863",
+      "name": "MasterFoods Dijon Mustard Jar",
+      "pack": "170 g",
+      "price_sgd_cents": 436,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 16,
+      "url": "https://www.lazada.sg/products/pdp-i301142979-s527234863.html"
+    },
+    {
+      "id": "i2368718042-s13850655004",
+      "name": "S-Pure Fresh Chicken Bone-In Thigh",
+      "pack": "450 g",
+      "price_sgd_cents": 899,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 17,
+      "url": "https://www.lazada.sg/products/pdp-i2368718042-s13850655004.html"
+    },
+    {
+      "id": "i3528412263-s23267045718",
+      "name": "Pigeon Aqua Baby Wipes 70s x6 (with Fliptop)",
+      "pack": "2.88 kg",
+      "price_sgd_cents": 1476,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 18,
+      "url": "https://www.lazada.sg/products/pdp-i3528412263-s23267045718.html"
+    },
+    {
+      "id": "i1204740553-s4845140502",
+      "name": "Golden Garden Blueberries - Frozen",
+      "pack": "1 kg",
+      "price_sgd_cents": 1291,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 19,
+      "url": "https://www.lazada.sg/products/pdp-i1204740553-s4845140502.html"
+    },
+    {
+      "id": "i2580753655-s16319731399",
+      "name": "[VALUE BUNDLE] RedMart Silky Soft 2Ply Facial Tissue Paper - 3 x 4 Pack",
+      "pack": "3 × 4 per pack",
+      "price_sgd_cents": 959,
+      "stock": "not_marked_sold_out",
+      "page": 3,
+      "position": 20,
+      "url": "https://www.lazada.sg/products/pdp-i2580753655-s16319731399.html"
+    },
+    {
+      "id": "i301122694-s527206520",
+      "name": "Scott Multi Purpose Kitchen Towels - 8 Rolls",
+      "pack": "8 × 55 per pack",
+      "price_sgd_cents": 610,
+      "stock": "not_marked_sold_out",
+      "page": 4,
+      "position": 1,
+      "url": "https://www.lazada.sg/products/pdp-i301122694-s527206520.html"
+    },
+    {
+      "id": "i301100875-s527118150",
+      "name": "Kleenex Ultra Soft Aloe Clean 3-Ply Toilet Tissue - 20 Rolls",
+      "pack": "20 × 200 per pack",
+      "price_sgd_cents": 1434,
+      "stock": "not_marked_sold_out",
+      "page": 4,
+      "position": 2,
+      "url": "https://www.lazada.sg/products/pdp-i301100875-s527118150.html"
+    },
+    {
+      "id": "i3180637884-s21636570255",
+      "name": "RedMart Biodegradable 30 Resealable Gallon Bag 270X280Mm",
+      "pack": "30 per pack",
+      "price_sgd_cents": 550,
+      "stock": "not_marked_sold_out",
+      "page": 4,
+      "position": 3,
+      "url": "https://www.lazada.sg/products/pdp-i3180637884-s21636570255.html"
+    },
+    {
+      "id": "i301158803-s527244401",
+      "name": "Watties Baby Peas 750G - Frozen",
+      "pack": "750 g",
+      "price_sgd_cents": 810,
+      "stock": "not_marked_sold_out",
+      "page": 4,
+      "position": 4,
+      "url": "https://www.lazada.sg/products/pdp-i301158803-s527244401.html"
+    },
+    {
+      "id": "i301164069-s527250305",
+      "name": "SCS Unsalted Pure Creamery Butter Block 227G",
+      "pack": "227 g",
+      "price_sgd_cents": 635,
+      "stock": "not_marked_sold_out",
+      "page": 4,
+      "position": 5,
+      "url": "https://www.lazada.sg/products/pdp-i301164069-s527250305.html"
+    },
+    {
+      "id": "i305094397-s541184904",
+      "name": "BIOGREEN Biodegradable Garbage Bag (L) - (L100 x W780)MM (BD-GB3039/2-10)",
+      "pack": "20 per pack",
+      "price_sgd_cents": 605,
+      "stock": "not_marked_sold_out",
+      "page": 4,
+      "position": 6,
+      "url": "https://www.lazada.sg/products/pdp-i305094397-s541184904.html"
+    },
+    {
+      "id": "i3356921268-s22446004652",
+      "name": "RedMart NZ Free Range Eggs (12x50g)",
+      "pack": "12 × 50 g",
+      "price_sgd_cents": 1075,
+      "stock": "not_marked_sold_out",
+      "page": 4,
+      "position": 7,
+      "url": "https://www.lazada.sg/products/pdp-i3356921268-s22446004652.html"
+    },
+    {
+      "id": "i301116616-s527198448",
+      "name": "Blue Elephant Fish Sauce",
+      "pack": "200 ml",
+      "price_sgd_cents": 425,
+      "stock": "not_marked_sold_out",
+      "page": 4,
+      "position": 8,
+      "url": "https://www.lazada.sg/products/pdp-i301116616-s527198448.html"
+    },
+    {
+      "id": "i301130400-s527192377",
+      "name": "Lee Kum Kee Panda Oyster Sauce 510g",
+      "pack": "510 g",
+      "price_sgd_cents": 398,
+      "stock": "not_marked_sold_out",
+      "page": 4,
+      "position": 9,
+      "url": "https://www.lazada.sg/products/pdp-i301130400-s527192377.html"
+    },
+    {
+      "id": "i301116671-s527198512",
+      "name": "Bellamy's Organic Vegetable Pasta Spirals 110G",
+      "pack": "110 g",
+      "price_sgd_cents": 731,
+      "stock": "not_marked_sold_out",
+      "page": 4,
+      "position": 10,
+      "url": "https://www.lazada.sg/products/pdp-i301116671-s527198512.html"
+    },
+    {
+      "id": "i2336882199-s13593375593",
+      "name": "Merries First Premium Pants M Diaper - 46s",
+      "pack": "46 per pack",
+      "price_sgd_cents": 2476,
+      "stock": "not_marked_sold_out",
+      "page": 4,
+      "position": 11,
+      "url": "https://www.lazada.sg/products/pdp-i2336882199-s13593375593.html"
+    },
+    {
+      "id": "i303624723-s537270932",
+      "name": "Knife 100 Percent Groundnut Oil Cooking Oil - 1L",
+      "pack": "1 L",
+      "price_sgd_cents": 733,
+      "stock": "not_marked_sold_out",
+      "page": 4,
+      "position": 12,
+      "url": "https://www.lazada.sg/products/pdp-i303624723-s537270932.html"
+    },
+    {
+      "id": "i383996629-s906430096",
+      "name": "Sainsbury's Raspberries - Frozen",
+      "pack": "350 g",
+      "price_sgd_cents": 985,
+      "stock": "not_marked_sold_out",
+      "page": 4,
+      "position": 13,
+      "url": "https://www.lazada.sg/products/pdp-i383996629-s906430096.html"
+    },
+    {
+      "id": "i301138805-s527224596",
+      "name": "Farmers Union Greek Style All Natural Yoghurt 500G",
+      "pack": "500 g",
+      "price_sgd_cents": 690,
+      "stock": "not_marked_sold_out",
+      "page": 4,
+      "position": 14,
+      "url": "https://www.lazada.sg/products/pdp-i301138805-s527224596.html"
+    },
+    {
+      "id": "i303436251-s536806516",
+      "name": "Selezione Oro Baby spinach",
+      "pack": "125 g",
+      "price_sgd_cents": 484,
+      "stock": "sold_out",
+      "page": 4,
+      "position": 15,
+      "url": "https://www.lazada.sg/products/pdp-i303436251-s536806516.html"
+    }
+  ],
+  "detail_checks": [
+    {
+      "product_id": "i301134811-s527214976",
+      "source": "product_description",
+      "finding": "Described as extra-fine flour for delicate cakes and cookies. No equivalence to plain/all-purpose flour established; do not silently substitute."
+    },
+    {
+      "product_id": "i2580753655-s16319731399",
+      "source": "product_description",
+      "finding": "Facial tissue packs are described, but boxed packaging is not established. Keep tissuebox mapping pending."
+    }
+  ]
+}
