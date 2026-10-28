@@ -1,6 +1,6 @@
 # Martie architecture
 
-This is the repository's concise behavior contract and component outline. It records the agreed approach; the application is not implemented yet.
+This is the repository's concise behavior contract and component outline. The browser hosting foundation is implemented; the shopping workflow below remains planned.
 
 ## Request flow
 
@@ -25,7 +25,9 @@ No model receives browser control or checkout tools. The browser worker acts on 
 | Workflow and storage | Durable requests, per-item progress, deduplication, mapping revisions and mutation recovery | `src/`, `migrations/` |
 | Deployment and operations | Container setup, persistent volume, protected login/repair access | `deploy/`, `docs/operations/` |
 
-Keep one TypeScript service with SQLite and an on-demand Chromium browser. The WhatsApp listener stays connected while the browser is idle. Railway is the intended host; hosted login, session persistence, WhatsApp pairing, and resource use still need live verification.
+Keep the TypeScript application, SQLite workflow storage, and WhatsApp listener on Railway. Run the on-demand Chromium worker on a separate Singapore VM with its own persistent profile volume and Chromium sandbox enabled. The listener stays connected while the browser is idle. This host split was selected after the Railway runtime rejected sandboxed Chromium startup.
+
+The browser package is prepared; the VM and authenticated application-to-worker connection are not live yet. The later connection must carry bounded, validated Standard/cart jobs, serialize profile access, and preserve request/mutation identifiers for recovery. It must not expose general shell execution or a public browser debugging endpoint. The temporary owner login tunnel is separate from that machine connection. Hosted login, session persistence, WhatsApp pairing, and resource use still need live verification.
 
 ## Mapping and learning
 
@@ -42,4 +44,4 @@ Keep one TypeScript service with SQLite and an on-demand Chromium browser. The W
 
 Local credentials, private name bindings, databases, and browser/WhatsApp session state belong under ignored `.local/` or in environment variables. The hosted service needs a separate persistent volume. Login repair access must be authenticated and disabled outside a repair session.
 
-Exact dependencies, model identifiers, API access, configuration variables, and deployment commands will be pinned and verified when the first integration probe is implemented.
+The browser dependencies and deployment commands are pinned in the package lockfile, Dockerfile, and [operations guide](operations/README.md). Model integrations and merchant-specific locators still require implementation and verification.
