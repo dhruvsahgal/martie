@@ -9,7 +9,9 @@ export DISPLAY=:99
 : "${MARTIE_OWNER_PASSWORD_HASH:?Set the owner password hash before deployment}"
 
 if [[ "$(id -u)" == 0 ]]; then
-  [[ "${RAILWAY_VOLUME_MOUNT_PATH:-}" == "$MARTIE_DATA_DIR" ]] || { echo 'Railway volume is required'; exit 1; }
+  if [[ -n "${RAILWAY_ENVIRONMENT_ID:-}${RAILWAY_VOLUME_MOUNT_PATH:-}" ]]; then
+    [[ "${RAILWAY_VOLUME_MOUNT_PATH:-}" == "$MARTIE_DATA_DIR" ]] || { echo 'Railway volume is required'; exit 1; }
+  fi
   mountpoint -q "$MARTIE_DATA_DIR" || { echo 'Data directory is not a mounted volume'; exit 1; }
   mkdir -p "$MARTIE_DATA_DIR/martie"
   chown node:node "$MARTIE_DATA_DIR/martie"

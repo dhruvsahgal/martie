@@ -31,7 +31,7 @@ function upgradeStatus(url: string, headers: Record<string, string> = {}) {
   });
 }
 
-test('the real gateway protects viewer HTTP and WebSocket access in both modes', { timeout: 30_000 }, async () => {
+test('the real gateway protects viewer HTTP and WebSocket access in both modes', { timeout: 120_000 }, async () => {
   const password = 'integration-test-password';
   const authorization = `Basic ${Buffer.from(`owner:${password}`).toString('base64')}`;
   const health = createServer((_req, res) => res.end('{"ready":true}'));
@@ -44,12 +44,12 @@ test('the real gateway protects viewer HTTP and WebSocket access in both modes',
   await listen(health, 3000);
   await listen(viewer, 6080);
   try {
-    for (const mode of ['login', 'headless']) {
+    for (const [deployment, mode] of [['railway', 'login'], ['railway', 'headless'], ['vm', 'login'], ['vm', 'headless']] as const) {
       const port = await availablePort();
       const base = `http://127.0.0.1:${port}`;
-      const origin = `https://127.0.0.1:${port}`;
+      const origin = deployment === 'vm' ? `http://localhost:${port}` : `https://127.0.0.1:${port}`;
       const gateway = spawn(process.env.CADDY_BIN ?? 'caddy', ['run', '--config', 'deploy/Caddyfile', '--adapter', 'caddyfile'], {
-        env: { ...process.env, PORT: String(port), MARTIE_BROWSER_MODE: mode, MARTIE_OWNER_PASSWORD_HASH: hashSync(password, 4) },
+        env: { ...process.env, PORT: String(port), MARTIE_BROWSER_MODE: mode, MARTIE_OWNER_PASSWORD_HASH: hashSync(password, 4), MARTIE_VIEWER_ORIGIN: deployment === 'vm' ? origin : '' },
         stdio: ['ignore', 'ignore', 'pipe'],
       });
       let log = '';
@@ -57,7 +57,7 @@ test('the real gateway protects viewer HTTP and WebSocket access in both modes',
       const exited = once(gateway, 'exit');
       try {
         let started = false;
-        for (let attempt = 0; attempt < 50; attempt++) {
+        for (let attempt = 0; attempt < 300; attempt++) {
           if (gateway.exitCode !== null) throw new Error(`Gateway exited: ${log}`);
           started = await fetch(`${base}/healthz`).then((res) => res.status === 200).catch(() => false);
           if (started) break;
@@ -73,6 +73,7 @@ test('the real gateway protects viewer HTTP and WebSocket access in both modes',
         assert.equal(await upgradeStatus(`${base}/websockify`), 401);
         assert.equal((await fetch(`${base}/vnc.html`, { headers: { authorization: 'Basic b3duZXI6d3Jvbmc=' } })).status, 401);
         assert.equal(await upgradeStatus(`${base}/websockify`, { authorization, Origin: 'https://untrusted.invalid' }), 403);
+        assert.equal(await upgradeStatus(`${base}/websockify`, { authorization, Origin: origin.replace(/:\d+$/, ':1') }), 403);
         assert.equal(viewerRequests, before, 'rejected requests never reach the viewer');
         const response = await fetch(`${base}/vnc.html`, { headers: { authorization } });
         assert.equal(response.status, mode === 'login' ? 200 : 423);

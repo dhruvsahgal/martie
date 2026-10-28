@@ -1,6 +1,6 @@
 # Setup milestones
 
-The owner has a Railway Pro account, a dedicated WhatsApp number, and this GitHub repository connected to Railway. The first browser-service implementation builds on Railway; Chromium startup is currently blocked by a sandbox permission error. See the [verification record](browser-verification.md) before attempting login.
+The owner has a Railway Pro account, a dedicated WhatsApp number, and this GitHub repository connected to Railway. The first browser-service implementation builds on Railway; its runtime rejects sandboxed Chromium startup. The owner selected a separate VM for the browser while keeping Martie on Railway. Use the [VM setup guide](vm-browser.md); see the [verification record](browser-verification.md) before attempting login.
 
 1. **Prove the hosted browser.** Package Chromium, configure a persistent volume, and provide temporary authenticated login access. Confirm the correct RedMart account, read the complete Standard list, and verify that closing the browser and restarting the service preserve login. Measure idle and peak memory. Do this before enabling cart writes.
 2. **Connect WhatsApp and storage.** Pair the dedicated number, persist its session, configure the allowed group and senders, and verify that only actual bot mentions enter the workflow. Persist requests and deduplicate message delivery.
@@ -11,11 +11,13 @@ Keep account credentials and session material out of Git. The bot must never per
 
 ## Browser service
 
-One container runs a small health service and Caddy. In `login` mode it also runs Chromium on Xvfb, with x11vnc and noVNC/websockify bound to loopback. Caddy requires the owner's password for the viewer page, assets, and WebSocket; `/healthz` exposes only readiness and mode. Railway supplies HTTPS. Use the HTTPS domain only, and expose port 8080 alone.
+One container runs a small health service and Caddy. In `login` mode it also runs Chromium on Xvfb, with x11vnc and noVNC/websockify bound to loopback. Caddy requires the owner's password for the viewer page, assets, and WebSocket; `/healthz` exposes only readiness and mode. The VM deployment publishes the gateway only on loopback and uses an encrypted SSH tunnel for owner access. The legacy Railway configuration expects edge HTTPS but cannot currently start the browser.
 
 In `headless` mode the service opens and closes Chromium twice to check persistent cookies, then releases browser memory. No viewer process runs. This milestone has no request queue or cart-write code. A healthy service does **not** prove that RedMart login is valid.
 
-### Configure Railway
+### Existing Railway diagnostic configuration
+
+The following records the attempted deployment; it is not the selected browser setup. Follow [VM browser setup](vm-browser.md) for the current route. Keep the Railway service for the later application implementation; do not point it at this browser-only branch as a working production deployment.
 
 Use one replica in Singapore, a volume mounted at `/data`, serverless sleeping off, and the included Dockerfile and `railway.json`. The entrypoint prepares `/data/martie` and drops to the unprivileged `node` user before starting the services. Chromium's sandbox is enabled. A missing volume or failed browser launch fails readiness.
 
@@ -36,7 +38,9 @@ This writes `.local/owner-access.json` with restrictive permissions and refuses 
 
 Railway supplies `RAILWAY_VOLUME_MOUNT_PATH`; do not fabricate it to bypass the mount check. The volume contains `martie/chromium/` and private probe reports. Never run multiple services or browser commands against that profile simultaneously.
 
-### Login and persistence proof
+### Historical Railway verification procedure
+
+These steps remain blocked on Railway. The equivalent procedure for the selected host is in [VM browser setup](vm-browser.md#owner-login).
 
 1. Deploy in headless mode and check that `/healthz` becomes ready. Anonymous viewer and WebSocket requests must return 401.
 2. Set `MARTIE_BROWSER_MODE=login` and deploy. Open the Railway HTTPS domain and authenticate as `owner` using the generated password.

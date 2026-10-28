@@ -25,7 +25,9 @@ No model receives browser control or checkout tools. The browser worker acts on 
 | Workflow and storage | Durable requests, per-item progress, deduplication, mapping revisions and mutation recovery | `src/`, `migrations/` |
 | Deployment and operations | Container setup, persistent volume, protected login/repair access | `deploy/`, `docs/operations/` |
 
-Keep one TypeScript service with SQLite and an on-demand Chromium browser. The WhatsApp listener stays connected while the browser is idle. Railway is the intended host; hosted login, session persistence, WhatsApp pairing, and resource use still need live verification.
+Keep the TypeScript application, SQLite workflow storage, and WhatsApp listener on Railway. Run the on-demand Chromium worker on a separate Singapore VM with its own persistent profile volume and Chromium sandbox enabled. The listener stays connected while the browser is idle. This host split was selected after the Railway runtime rejected sandboxed Chromium startup.
+
+The browser package is prepared; the VM and authenticated application-to-worker connection are not live yet. The later connection must carry bounded, validated Standard/cart jobs, serialize profile access, and preserve request/mutation identifiers for recovery. It must not expose general shell execution or a public browser debugging endpoint. The temporary owner login tunnel is separate from that machine connection. Hosted login, session persistence, WhatsApp pairing, and resource use still need live verification.
 
 ## Mapping and learning
 

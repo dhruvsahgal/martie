@@ -18,7 +18,7 @@
       basic_auth {
         owner {env.MARTIE_OWNER_PASSWORD_HASH}
       }
-      @cross_origin expression `{http.request.header.Origin} != "" && {http.request.header.Origin} != "https://" + {http.request.hostport}`
+      @cross_origin expression `{http.request.header.Origin} != "" && {http.request.header.Origin} != ({env.MARTIE_VIEWER_ORIGIN} != "" ? {env.MARTIE_VIEWER_ORIGIN} : "https://" + {http.request.hostport})`
       respond @cross_origin "Origin refused" 403
       @login expression `{env.MARTIE_BROWSER_MODE} == "login"`
       handle @login {

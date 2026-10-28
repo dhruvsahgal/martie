@@ -2,7 +2,7 @@
 
 Martie will turn grocery lists addressed to a WhatsApp bot into a RedMart cart for the owner to review and check out.
 
-**Current status:** semantic seed data and the first browser-service implementation. Local access, profile, and shutdown tests pass; the Docker image builds on Railway, but hosted Chromium startup is blocked by a sandbox permission error. See [hosted verification](docs/operations/browser-verification.md). WhatsApp intake, AI matching, Standard-list automation, and cart changes are not implemented yet.
+**Current status:** semantic seed data and the first browser-service implementation. The Docker image builds on Railway, but its runtime blocks sandboxed Chromium. The selected approach keeps Martie on Railway and moves the browser to a separate VM; the [VM deployment package](docs/operations/vm-browser.md) is prepared, pending provisioning and live verification. See [hosted verification](docs/operations/browser-verification.md). WhatsApp intake, AI matching, Standard-list automation, and cart changes are not implemented yet.
 
 ## Project layout
 
@@ -15,7 +15,7 @@ migrations/         Planned SQLite schema migrations
 tests/
   fixtures/         Sanitized test inputs and browser fixtures
 scripts/            Integration probes and model evaluation utilities
-deploy/             Railway/container startup and access configuration
+deploy/             Container startup, access configuration, and VM deployment
 docs/
   architecture.md   Agreed behavior and component boundaries
   operations/       Setup milestones and recovery documentation
@@ -35,7 +35,7 @@ At runtime, Martie must read the complete live Standard list, recheck availabili
 
 ## Build and setup
 
-Read the [architecture](docs/architecture.md) and [setup milestones](docs/operations/README.md). The first milestone is proving that a Railway-hosted browser can log in to the correct RedMart account, read Standard, and retain the session across a restart.
+Read the [architecture](docs/architecture.md) and [setup milestones](docs/operations/README.md). The first milestone is proving that the VM-hosted browser can log in to the correct RedMart account, read Standard, and retain the session across a restart.
 
 Use Node 24.22.1 or newer within Node 24:
 

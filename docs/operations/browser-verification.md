@@ -11,6 +11,8 @@ Date: 2026-10-28. Scope: the browser portion of the first setup milestone, befor
 - Local real-Caddy tests reject anonymous and incorrect-password HTTP and WebSocket access, reject an authenticated cross-origin WebSocket, and disable the viewer in headless mode.
 - Local subprocess tests stop the service during startup and after its profile check, then reopen the profile successfully.
 - TypeScript checking and shell syntax checks pass. No lint tool is configured.
+- The VM Compose configuration validates with Compose 2.40.3, preserves the bcrypt hash through its raw env file, and publishes the gateway only on loopback. The vendored seccomp profile matches Playwright v1.64.1.
+- The extended gateway test passes for both Railway HTTPS and the VM tunnel, in login and headless modes. The browser/configuration checks pass; one concurrent shutdown test timed out before startup and passed when rerun alone.
 
 ## Hosted blocker
 
@@ -25,11 +27,12 @@ This establishes that the deployed configuration cannot start sandboxed Chromium
 
 The sandbox remains enabled. No public viewer domain was created, no account credentials were entered, and no cart was touched. The service cannot pass its health check in this state. The failed deployment is not a usable browser endpoint.
 
-Next decision: obtain a supported sandbox configuration or use a browser host where it can be verified; alternatively, explicitly accept running Chromium without its own sandbox inside Railway's container isolation. Container isolation is not equivalent to Chromium's per-process sandbox. Do not silently add `--no-sandbox` or privileged-container settings as a deployment fix.
+Decision on 2026-10-28: keep Chromium's sandbox enabled and move the browser to a separate VM, retaining Railway for the application. The [VM package and setup procedure](vm-browser.md) are prepared. Provider purchase, VM provisioning, and live sandbox/persistence verification remain pending. Do not add `--no-sandbox`, privileged-container settings, or an unconfined seccomp profile as a deployment fix.
 
 ## Still unverified
 
-- Protected viewer access over the deployed Railway HTTPS endpoint.
+- VM deployment, active namespace/seccomp sandbox, and protected viewer access through the owner tunnel.
+- Railway-to-VM job connection (not implemented in this browser milestone).
 - Correct RedMart account login and complete Standard-list/cart reads.
 - Merchant login persistence after browser close, mode changes, and service restarts.
 - Hosted idle/peak memory and actual monthly usage.
