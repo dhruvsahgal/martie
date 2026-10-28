@@ -2,7 +2,7 @@
 
 Martie will turn grocery lists addressed to a WhatsApp bot into a RedMart cart for the owner to review and check out.
 
-**Current status:** project scaffold and semantic seed data. The bot, model integrations, browser worker, and Railway deployment configuration are not implemented yet. There is no install or start command at this stage.
+**Current status:** semantic seed data and the first browser-service implementation. Local access, profile, and shutdown tests pass; the Docker image builds on Railway, but hosted Chromium startup is blocked by a sandbox permission error. See [hosted verification](docs/operations/browser-verification.md). WhatsApp intake, AI matching, Standard-list automation, and cart changes are not implemented yet.
 
 ## Project layout
 
@@ -10,7 +10,7 @@ Martie will turn grocery lists addressed to a WhatsApp bot into a RedMart cart f
 data/
   seed/             Grocery meanings, aliases, and confirmation status
   catalogue/        Dated Standard-list observations supporting the seed
-src/                Planned TypeScript application modules
+src/                Browser startup, persistence checks, and health endpoint
 migrations/         Planned SQLite schema migrations
 tests/
   fixtures/         Sanitized test inputs and browser fixtures
@@ -36,5 +36,19 @@ At runtime, Martie must read the complete live Standard list, recheck availabili
 ## Build and setup
 
 Read the [architecture](docs/architecture.md) and [setup milestones](docs/operations/README.md). The first milestone is proving that a Railway-hosted browser can log in to the correct RedMart account, read Standard, and retain the session across a restart.
+
+Use Node 24.22.1 or newer within Node 24:
+
+```sh
+npm ci
+npm run build
+npm test
+npx playwright install chromium
+npm run test:browser
+npm run test:shutdown
+CADDY_BIN=/path/to/caddy npm run test:access
+```
+
+The access test uses Caddy 2.11.7 and loopback ports 3000 and 6080. It checks both HTTP and WebSocket authentication, cross-origin rejection, and viewer shutdown in headless mode. The browser test uses an isolated temporary profile. No test logs into RedMart or changes a cart.
 
 Keep local secrets, household-name bindings, browser profiles, WhatsApp authentication, and databases in `.env` or `.local/`, both ignored by Git. Hosted runtime state belongs on a persistent volume, separate from the versioned seed and catalogue data. Never commit session exports or credentials.

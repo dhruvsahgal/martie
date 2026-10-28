@@ -1,6 +1,6 @@
 # Martie architecture
 
-This is the repository's concise behavior contract and component outline. It records the agreed approach; the application is not implemented yet.
+This is the repository's concise behavior contract and component outline. The browser hosting foundation is implemented; the shopping workflow below remains planned.
 
 ## Request flow
 
@@ -42,4 +42,4 @@ Keep one TypeScript service with SQLite and an on-demand Chromium browser. The W
 
 Local credentials, private name bindings, databases, and browser/WhatsApp session state belong under ignored `.local/` or in environment variables. The hosted service needs a separate persistent volume. Login repair access must be authenticated and disabled outside a repair session.
 
-Exact dependencies, model identifiers, API access, configuration variables, and deployment commands will be pinned and verified when the first integration probe is implemented.
+The browser dependencies and deployment commands are pinned in the package lockfile, Dockerfile, and [operations guide](operations/README.md). Model integrations and merchant-specific locators still require implementation and verification.

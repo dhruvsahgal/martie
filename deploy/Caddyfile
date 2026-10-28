@@ -1,0 +1,34 @@
+{
+  admin off
+  auto_https off
+}
+
+:{$PORT:8080} {
+  header {
+    Cache-Control "no-store"
+    X-Content-Type-Options "nosniff"
+    X-Frame-Options "DENY"
+    Referrer-Policy "no-referrer"
+  }
+  handle /healthz {
+    reverse_proxy 127.0.0.1:3000
+  }
+  handle {
+    route {
+      basic_auth {
+        owner {env.MARTIE_OWNER_PASSWORD_HASH}
+      }
+      @cross_origin expression `{http.request.header.Origin} != "" && {http.request.header.Origin} != "https://" + {http.request.hostport}`
+      respond @cross_origin "Origin refused" 403
+      @login expression `{env.MARTIE_BROWSER_MODE} == "login"`
+      handle @login {
+        @root path /
+        redir @root /vnc.html?autoconnect=1&resize=scale&path=websockify 302
+        reverse_proxy 127.0.0.1:6080
+      }
+      handle {
+        respond "Martie is running headlessly. The login viewer is disabled." 423
+      }
+    }
+  }
+}

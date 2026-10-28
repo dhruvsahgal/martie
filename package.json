@@ -1,0 +1,24 @@
+{
+  "name": "martie",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24.22.1 <25" },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/config.test.ts",
+    "test:browser": "node --test tests/browser.test.ts",
+    "test:access": "node --test tests/owner-access.test.ts",
+    "test:shutdown": "node --test tests/shutdown.test.ts",
+    "start": "node dist/src/main.js",
+    "probe:browser": "node dist/scripts/probe-browser.js",
+    "owner:credentials": "node scripts/create-owner-access.ts"
+  },
+  "dependencies": { "playwright": "1.64.1" },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "bcryptjs": "3.0.3",
+    "typescript": "7.0.2"
+  }
+}
