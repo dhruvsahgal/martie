@@ -33,7 +33,7 @@
     "Runtime activation, learning, confirmation, correction and cart rules remain governed by the Martie plan.",
     "Catalogue observations, candidate sets and price winners are dated evidence for setup, not semantic memory or runtime approvals. Do not import these as permanent SKU bindings."
   ],
-  "governing_plan": "docs/plans/2026-10-15-1816-feat-whatsapp-redmart-grocery-bot-plan.md",
+  "governing_plan": "docs/architecture.md",
   "entries": [
     {
       "id": "potatoes",
@@ -1366,7 +1366,7 @@
   ],
   "catalogue_observation": {
     "snapshot_id": "standard-2026-10-28-r2",
-    "file": "martie-standard-list-2026-10-28-r2.json",
+    "file": "data/catalogue/martie-standard-list-2026-10-28-r2.json",
     "observed_on": "2026-10-28",
     "list_name": "Standard",
     "products": 79,
@@ -1398,7 +1398,7 @@
   "catalogue_observation_supplements": [
     {
       "snapshot_id": "standard-2026-10-28-carrots-addition",
-      "file": "martie-standard-carrots-addition-2026-10-28.json",
+      "file": "data/catalogue/martie-standard-carrots-addition-2026-10-28.json",
       "observed_on": "2026-10-28",
       "scope": "single_product_membership_verification",
       "product_ids": [
